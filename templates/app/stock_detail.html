@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Биржа</th>
+        <th scope="col">Дата</th>
+        <th scope="col">Время</th>
+        <th scope="col">Валюта</th>
+        <th scope="col">Цена</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{ stock.name }}</th>
+            <td>{{ stock.date }}</td>
+            <td>{{ stock.time }}</td>
+            <td>{{ stock.currency }}</td>
+            <td>{{ stock.price }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock content %}

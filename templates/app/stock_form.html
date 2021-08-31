@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="POST" action="{% url 'add_stock' %}" class='m-3 p-2'>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Send message">
+    </form>
+{% endblock content %}

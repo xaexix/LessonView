@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Биржа</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for stock in object_list %}
+        <tr>
+            <th scope="row"><a href="{% url 'stock_detail' stock.pk %}">{{ stock.name }}</a></th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
