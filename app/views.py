@@ -6,6 +6,7 @@ from .forms import StockForm
 
 
 class HomePageView(TemplateView):
+
     template_name = 'base.html'
 
 
